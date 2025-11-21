@@ -71,8 +71,8 @@ Os DTOs foram configurados para aceitar campos nulos (`Nullable`), enquanto os M
 1.  **Clone o repositório:**
 
     ```bash
-    git clone https://github.com/seu-usuario/kobe-store-challenge.git
-    cd kobe-store-challenge
+    git clone https://github.com/denym123/project-study.git
+    cd project-study
     ```
 
 2.  **Instale as dependências:**
