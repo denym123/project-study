@@ -1,4 +1,4 @@
-# 🛍️ Store Challenge
+# 🛍️ Kobe Store Challenge
 
 Este projeto é uma implementação de um catálogo de produtos consumindo a [Fake Store API](https://fakestoreapi.com/), desenvolvido como parte do desafio técnico para a vaga de Desenvolvedor Flutter Sênior.
 
@@ -105,4 +105,4 @@ flutter test
 
 -----
 
-*Desenvolvido por [Seu Nome]*
+*Desenvolvido por Dênym Filho*
