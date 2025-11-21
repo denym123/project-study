@@ -24,7 +24,10 @@ class _ProductPageState
                 final product = data[index];
                 return ListTile(
                   title: Text(product.title),
-                  subtitle: Text('\$${product.price}'),
+                  subtitle: Text(
+                    '\$${product.price}',
+                    style: Theme.of(context).textTheme.titleLarge,
+                  ),
                 );
               },
             );
