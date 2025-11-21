@@ -18,7 +18,7 @@ class FutureWrapper<T> {
 
   Future<void> execute() async {
     try {
-      asyncSignal.value = AsyncLoading();
+      asyncSignal.setLoading();
       final result = await future();
       if (onValue != null) {
         await onValue!(result);

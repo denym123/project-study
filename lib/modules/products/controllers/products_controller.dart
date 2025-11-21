@@ -16,9 +16,13 @@ class ProductsController with ProductsVariables, ControllerLifeCycle {
   }
 
   Future<void> fetchProducts() async {
-    FutureWrapper(
+    await FutureWrapper(
       asyncSignal: productsAS,
       future: _productRepository.fetchProducts,
     ).execute();
+  }
+
+  Future<void> refreshProducts() async {
+    await fetchProducts();
   }
 }
