@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:signals/signals.dart';
-import 'package:testekobe/shared/life_cycle/life_cycle.dart';
 
+import '../../../shared/shared.dart';
 import '../products.dart';
 
 class ProductsController with ProductsVariables, ControllerLifeCycle {
@@ -17,12 +16,9 @@ class ProductsController with ProductsVariables, ControllerLifeCycle {
   }
 
   Future<void> fetchProducts() async {
-    try {
-      productsAS.value = AsyncLoading();
-      final products = await _productRepository.fetchProducts();
-      productsAS.value = AsyncData(products);
-    } catch (e, s) {
-      productsAS.value = AsyncError(e, s);
-    }
+    FutureWrapper(
+      asyncSignal: productsAS,
+      future: _productRepository.fetchProducts,
+    ).execute();
   }
 }
