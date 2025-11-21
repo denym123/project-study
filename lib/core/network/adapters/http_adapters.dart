@@ -1,8 +1,12 @@
-import 'package:dio/io.dart';
+import 'dart:developer';
 
-class HttpAdapters extends DioForNative {
-  HttpAdapters() {
+import 'package:dio/io.dart';
+import 'package:testekobe/core/core.dart';
+
+class HttpAdapter extends DioForNative {
+  HttpAdapter() {
     _configureOptions();
+    _configureInterceptors();
   }
 
   void _configureOptions() {
@@ -10,5 +14,10 @@ class HttpAdapters extends DioForNative {
       ..baseUrl = 'https://fakestoreapi.com/'
       ..connectTimeout = const Duration(seconds: 15)
       ..receiveTimeout = const Duration(seconds: 15);
+  }
+
+  void _configureInterceptors() {
+    log('Configuring HTTP Interceptors');
+    interceptors.addAll([LoggerInterceptor()]);
   }
 }

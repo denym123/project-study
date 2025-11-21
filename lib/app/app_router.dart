@@ -12,6 +12,6 @@ class AppRouter {
   );
 
   static final globalProviders = <SingleChildWidget>[
-    Provider(create: (context) => HttpAdapters()),
+    Provider(create: (context) => HttpAdapter()),
   ];
 }

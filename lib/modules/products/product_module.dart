@@ -1,4 +1,5 @@
 import 'package:provider/provider.dart';
+import 'package:testekobe/core/core.dart';
 
 import '../../shared/shared.dart';
 import 'products.dart';
@@ -14,7 +15,9 @@ class ProductModule extends ProviderModule {
             Provider(
               create: (context) {
                 return ProductsController(
-                  productRepository: context.read<ProductRepository>(),
+                  productRepository: ProductRepositoryImpl(
+                    httpAdapters: context.read<HttpAdapter>(),
+                  ),
                 );
               },
             ),
