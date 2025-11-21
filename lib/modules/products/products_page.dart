@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:signals/signals_flutter.dart';
 import 'package:testekobe/modules/modules.dart';
-import 'package:testekobe/modules/products/widgets/products_list_widget.dart';
 import 'package:testekobe/shared/life_cycle/life_cycle.dart';
 
 class ProductsPage extends StatefulWidget {
