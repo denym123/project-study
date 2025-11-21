@@ -15,8 +15,8 @@ class SplashController with SplashVariables, ControllerLifeCycle {
   Future<void> _init(BuildContext context) async {
     try {
       state.value = AsyncLoading();
-      await Future.delayed(const Duration(seconds: 2)); // Simula tempo de rede
-      context.go(ProductsModule.path); // Nunca chega aqui
+      await Future.delayed(const Duration(seconds: 2));
+      context.go(ProductsModule.path);
     } catch (e, s) {
       state.value = AsyncError(e, s);
     }
