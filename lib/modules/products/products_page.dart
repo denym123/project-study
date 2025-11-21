@@ -4,15 +4,15 @@ import 'package:testekobe/modules/modules.dart';
 import 'package:testekobe/modules/products/widgets/products_list_widget.dart';
 import 'package:testekobe/shared/life_cycle/life_cycle.dart';
 
-class ProductPage extends StatefulWidget {
-  const ProductPage({super.key});
+class ProductsPage extends StatefulWidget {
+  const ProductsPage({super.key});
 
   @override
-  State<ProductPage> createState() => _ProductPageState();
+  State<ProductsPage> createState() => _ProductsPageState();
 }
 
-class _ProductPageState
-    extends PageLifeCycleState<ProductPage, ProductsController> {
+class _ProductsPageState
+    extends PageLifeCycleState<ProductsPage, ProductsController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

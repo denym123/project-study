@@ -16,7 +16,7 @@ class SplashController with SplashVariables, ControllerLifeCycle {
     try {
       state.value = AsyncLoading();
       await Future.delayed(const Duration(seconds: 2)); // Simula tempo de rede
-      context.go(ProductModule.path); // Nunca chega aqui
+      context.go(ProductsModule.path); // Nunca chega aqui
     } catch (e, s) {
       state.value = AsyncError(e, s);
     }

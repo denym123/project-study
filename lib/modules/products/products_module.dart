@@ -4,12 +4,12 @@ import 'package:testekobe/core/core.dart';
 import '../../shared/shared.dart';
 import 'products.dart';
 
-class ProductModule extends ProviderModule {
+class ProductsModule extends ProviderModule {
   static final path = '/products';
-  ProductModule()
+  ProductsModule()
     : super(
         path: path,
-        page: const ProductPage(),
+        page: const ProductsPage(),
         bindings: (state) {
           return [
             Provider(
